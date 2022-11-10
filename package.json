@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Individual Project for Module 1",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "jest"
   },
