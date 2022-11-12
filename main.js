@@ -29,4 +29,6 @@ export function sort(type) {
   } else {
     //Write your code here for sorting (descending)
   }
+
+  return newsList;
 }
