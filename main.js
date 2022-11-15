@@ -21,6 +21,8 @@ export function search() {
   const inputValue = document.getElementById("search-input").value;
 
   //Write your code here for the search function
+
+  return newsList;
 }
 
 export function sort(type) {
