@@ -6,31 +6,46 @@
 
 //newsList is the variable that holds an array of strings
 export var newsList = [
-  "What films should an aspiring journalist watch?",
-  "Buried underpants and tea bags help scientists evaluate soil",
-  "Decoder: Mining asteroids for minerals can help spare Earth",
-  "Media glare can enrich tennis pros yet imperil mental health",
-  "'Nightmare' TV show 'Euphoria — health threat or high art?",
-  "Decoder: Armenia in a bind as Ukraine war resets global order",
-  "What books should an aspiring journalist read?",
-  "Marie Colvin shined a light on war-torn corners of the world",
+   "What films should an aspiring journalist watch?",
+   "Buried underpants and tea bags help scientists evaluate soil",
+   "Decoder: Mining asteroids for minerals can help spare Earth",
+   "Media glare can enrich tennis pros yet imperil mental health",
+   "'Nightmare' TV show 'Euphoria — health threat or high art?",
+   "Decoder: Armenia in a bind as Ukraine war resets global order",
+   "What books should an aspiring journalist read?",
+   "Marie Colvin shined a light on war-torn corners of the world",
 ];
 
+
+
 export function search() {
-  //inputValue is the variable that contains the search string
-  const inputValue = document.getElementById("search-input").value;
+   //inputValue is the variable that contains the search string
+  const inputValue = document.getElementById("search-input").value; 
+  //const inputValue = "What films";
 
-  //Write your code here for the search function
+ // Write your code here for the search function
+  const filteredNews = newsList.filter(function(element ){
+    return element.toLowerCase().indexOf(inputValue.toLocaleLowerCase()) > -1;
+  });
 
-  return newsList;
-}
+  
+    return filteredNews;
+};  
 
-export function sort(type) {
-  if (type == "ascending") {
+
+
+export function sort( ascending, descending) {
+   
+  if ( ascending == "ascending") {
     //Write your code here for sorting (ascending)
-  } else {
+     newsList.sort();
+  } else (descending == "descending") 
     //Write your code here for sorting (descending)
-  }
+      newsList.reverse();
+  
 
   return newsList;
 }
+
+search();
+
